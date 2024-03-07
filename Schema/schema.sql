@@ -14,3 +14,11 @@ create Table Dogs (
     underHumaneInvestigation bool,
     PRIMARY KEY(id)
 );
+
+create Table Walkers (
+	id int NOT NULL auto_increment,
+    firstName varchar(40),
+    lastName varchar(40),
+    level ENUM('Blue', 'Green', 'Yellow', 'Red'),
+    primary key(id)
+);
