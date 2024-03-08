@@ -30,3 +30,15 @@ create Table If Not Exists Notes (
     primary key(id),
     foreign key(dogId) references Dogs(id)
 );
+
+create Table If Not Exists Walks (
+	id int NOT NULL auto_increment,
+    dogId int,
+    walkerId int,
+    date date,
+    timeSlot ENUM('Morning', 'Afternoon', 'Evening'),
+    type ENUM('Short Walk', 'Long Walk', 'Play yard', 'Field Trip', 'Pack walk'),
+    primary key(id),
+    foreign key(dogId) references Dogs(id),
+    foreign key(walkerId) references Walkers(id)
+);
