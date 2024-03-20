@@ -31,14 +31,22 @@ create Table If Not Exists Notes (
     foreign key(dogId) references Dogs(id)
 );
 
-create Table If Not Exists Walks (
+create Table If Not Exists DogActivities (
 	id int NOT NULL auto_increment,
     dogId int,
     walkerId int,
     date date,
     timeSlot ENUM('Morning', 'Afternoon', 'Evening'),
-    type ENUM('Short Walk', 'Long Walk', 'Play yard', 'Field Trip', 'Pack walk'),
+    type ENUM('Short_Walk', 'Long_Walk', 'Play_Yard', 'Field_Trip', 'Pack_Walk'),
     primary key(id),
-    foreign key(dogId) references Dogs(id),
-    foreign key(walkerId) references Walkers(id)
+    CONSTRAINT `dog`
+		FOREIGN KEY (`dogId`)
+		REFERENCES `animalshelter`.`dogs` (`id`)
+		ON DELETE SET NULL
+		ON UPDATE CASCADE,
+	CONSTRAINT `walker`
+		FOREIGN KEY (`dogId`)
+		REFERENCES `animalshelter`.`dogs` (`id`)
+		ON DELETE SET NULL
+		ON UPDATE CASCADE
 );
