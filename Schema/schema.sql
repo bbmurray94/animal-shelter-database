@@ -15,12 +15,38 @@ create Table If Not Exists Dogs (
     PRIMARY KEY(id)
 );
 
-create Table If Not Exists Walkers (
+create Table If Not Exists UserRoles (
+	id int NOT NULL auto_increment,
+    name varchar(40),
+    primary key(id)
+);
+
+create Table If Not Exists Users (
 	id int NOT NULL auto_increment,
     firstName varchar(40),
-    lastName varchar(40),
+    lastName varchar(40), 
+    userName varchar(100) NOT NULL,
+    password varchar(100),
+    userRoleId int,
+    primary key(id),
+    unique(userName),
+    CONSTRAINT `userRole`
+		FOREIGN KEY (`userRoleId`)
+		REFERENCES UserRoles(`id`)
+		ON DELETE SET NULL
+		ON UPDATE CASCADE
+);
+
+create Table If Not Exists Walkers (
+	id int NOT NULL auto_increment,
+    userId int,
     level ENUM('Blue', 'Green', 'Yellow', 'Red'),
-    primary key(id)
+    primary key(id),
+    CONSTRAINT `user`
+		FOREIGN KEY (`userId`)
+		REFERENCES Users(`id`)
+		ON DELETE SET NULL
+		ON UPDATE CASCADE
 );
 
 create Table If Not Exists Notes (
@@ -41,12 +67,12 @@ create Table If Not Exists DogActivities (
     primary key(id),
     CONSTRAINT `dog`
 		FOREIGN KEY (`dogId`)
-		REFERENCES `animalshelter`.`dogs` (`id`)
+		REFERENCES Dogs(`id`)
 		ON DELETE SET NULL
 		ON UPDATE CASCADE,
 	CONSTRAINT `walker`
-		FOREIGN KEY (`dogId`)
-		REFERENCES `animalshelter`.`dogs` (`id`)
+		FOREIGN KEY (`walkerId`)
+		REFERENCES Walkers(`id`)
 		ON DELETE SET NULL
 		ON UPDATE CASCADE
 );
