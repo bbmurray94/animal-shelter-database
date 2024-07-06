@@ -4,19 +4,19 @@ Insert Into UserRoles (name) Values ('VolunteerCoach');
 Insert Into UserRoles (name) Values ('Volunteer');
 
 Insert INTO Users (firstName, lastName, userName, password, userRoleId)
-Values ('Sarah', 'Smith', 'ssmith', 'password', 1);
+Values ('Sarah', 'Smith', 'ssmith', 'gVbwEDPI52ga8ahVxfgv/5KwjEjeQjzU1Frx13u6F+4=', 1);
 Insert INTO Users (firstName, lastName, userName, password, userRoleId)
-Values ('John', 'Baker', 'jbaker', 'password', 2);
+Values ('John', 'Baker', 'jbaker', 'gVbwEDPI52ga8ahVxfgv/5KwjEjeQjzU1Frx13u6F+4=', 2);
 Insert INTO Users (firstName, lastName, userName, password, userRoleId)
-Values ('James', 'Doe', 'jdoe', 'password', 3);
+Values ('James', 'Doe', 'jdoe', 'gVbwEDPI52ga8ahVxfgv/5KwjEjeQjzU1Frx13u6F+4=', 3);
 Insert INTO Users (firstName, lastName, userName, password, userRoleId)
-Values ('Katie', 'Johnson', 'kjohnson', 'password', 4);
+Values ('Katie', 'Johnson', 'kjohnson', 'gVbwEDPI52ga8ahVxfgv/5KwjEjeQjzU1Frx13u6F+4=', 4);
 Insert INTO Users (firstName, lastName, userName, password, userRoleId)
-Values ('Mike', 'Murphy', 'mmurphy', 'password', 4);
+Values ('Mike', 'Murphy', 'mmurphy', 'gVbwEDPI52ga8ahVxfgv/5KwjEjeQjzU1Frx13u6F+4=', 4);
 Insert INTO Users (firstName, lastName, userName, password, userRoleId)
-Values ('Jessica', 'Williams', 'jwilliams', 'password', 4);
+Values ('Jessica', 'Williams', 'jwilliams', 'gVbwEDPI52ga8ahVxfgv/5KwjEjeQjzU1Frx13u6F+4=', 4);
 Insert INTO Users (firstName, lastName, userName, password, userRoleId)
-Values ('Katie', 'Moore', 'kmoore', 'password', 4);
+Values ('Katie', 'Moore', 'kmoore', 'gVbwEDPI52ga8ahVxfgv/5KwjEjeQjzU1Frx13u6F+4=', 4);
 
 INSERT INTO Walkers (userId, level) VALUES (2, 'Red');
 INSERT INTO Walkers (userId, level) VALUES (3, 'Yellow');

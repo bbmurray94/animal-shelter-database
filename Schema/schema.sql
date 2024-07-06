@@ -54,13 +54,17 @@ create Table If Not Exists Notes (
     dogId int,
     note varchar(255),
     primary key(id),
-    foreign key(dogId) references Dogs(id)
+    CONSTRAINT `dogNotes`
+		FOREIGN KEY (`dogId`)
+		REFERENCES Dogs(`id`)
+		ON DELETE SET NULL
+		ON UPDATE CASCADE
 );
 
 create Table If Not Exists DogActivities (
 	id int NOT NULL auto_increment,
     dogId int,
-    walkerId int,
+    userId int,
     date date,
     timeSlot ENUM('Morning', 'Afternoon', 'Evening'),
     type ENUM('Short_Walk', 'Long_Walk', 'Play_Yard', 'Field_Trip', 'Pack_Walk'),
@@ -70,9 +74,9 @@ create Table If Not Exists DogActivities (
 		REFERENCES Dogs(`id`)
 		ON DELETE SET NULL
 		ON UPDATE CASCADE,
-	CONSTRAINT `walker`
-		FOREIGN KEY (`walkerId`)
-		REFERENCES Walkers(`id`)
+	CONSTRAINT `userDogActivities`
+		FOREIGN KEY (`userId`)
+		REFERENCES Users(`id`)
 		ON DELETE SET NULL
 		ON UPDATE CASCADE
 );

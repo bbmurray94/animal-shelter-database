@@ -12,9 +12,9 @@ INSERT INTO Notes (dogId, note) VALUES (2, 'Door dasher');
 INSERT INTO Notes (dogId, note) VALUES (3, 'Needs Harness');
 INSERT INTO Notes (dogId, note) VALUES (4, 'Door dasher');
 
-INSERT INTO DogActivities (dogId, walkerId, date, timeSlot, type) VALUES (1, 1, '2024-06-24', 'Morning', 'Short_Walk');
-INSERT INTO DogActivities (dogId, walkerId, date, timeSlot, type) VALUES (1, 2, '2024-06-24', 'Afternoon', 'Short_Walk');
-INSERT INTO DogActivities (dogId, walkerId, date, timeSlot, type) VALUES (1, 3, '2024-06-24', 'Evening', 'Short_Walk');
-INSERT INTO DogActivities (dogId, walkerId, date, timeSlot, type) VALUES (2, 3, '2024-06-24', 'Evening', 'Long_Walk');
-INSERT INTO DogActivities (dogId, walkerId, date, timeSlot, type) VALUES (3, 4, '2024-06-25', 'Afternoon', 'Short_Walk');
-INSERT INTO DogActivities (dogId, walkerId, date, timeSlot, type) VALUES (3, 1, '2024-06-25', 'Morning', 'Short_Walk');
+INSERT INTO DogActivities (dogId, userId, date, timeSlot, type) VALUES (1, 1, '2024-06-24', 'Morning', 'Short_Walk');
+INSERT INTO DogActivities (dogId, userId, date, timeSlot, type) VALUES (1, 2, '2024-06-24', 'Afternoon', 'Short_Walk');
+INSERT INTO DogActivities (dogId, userId, date, timeSlot, type) VALUES (1, 3, '2024-06-24', 'Evening', 'Short_Walk');
+INSERT INTO DogActivities (dogId, userId, date, timeSlot, type) VALUES (2, 3, '2024-06-24', 'Evening', 'Long_Walk');
+INSERT INTO DogActivities (dogId, userId, date, timeSlot, type) VALUES (3, 4, '2024-06-25', 'Afternoon', 'Short_Walk');
+INSERT INTO DogActivities (dogId, userId, date, timeSlot, type) VALUES (3, 1, '2024-06-25', 'Morning', 'Short_Walk');
